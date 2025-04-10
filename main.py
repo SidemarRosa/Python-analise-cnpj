@@ -17,7 +17,7 @@ estabelecimentos = pd.read_csv(
     names=colunas,
     header=None,
     low_memory=False,
-    nrows=100000  # 👉 lê só as primeiras 100 mil linhas
+    nrows=500000  # 👉 lê só as primeiras 100 mil linhas
 )
 
 # Filtro: empresas ativas
