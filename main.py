@@ -28,12 +28,13 @@ ativas_com_email = ativas[ativas['email'].notna() & (ativas['email'].str.strip()
 
 # Selecionar colunas desejadas
 colunas_selecionadas = [
-    'cnpj_basico', 'nome_fantasia', 'cnae_fiscal', 'uf', 'municipio', 'email',
-    'ddd_1', 'telefone_1', 'ddd_2', 'telefone_2', 'ddd_fax', 'fax'
+    'cnpj_basico', 'cnpj_ordem', 'cnpj_dv', 'nome_fantasia', 'cnae_fiscal', 'cnae_fiscal_secundaria','data_inicio_atividade', 'uf', 'municipio', 'email',
+    'ddd_1', 'telefone_1', 'ddd_2', 'telefone_2'
 ]
 
 ativas_reduzido = ativas_com_email[colunas_selecionadas]
 
 # Salvar em CSV
-ativas_reduzido.to_csv('ativas_com_email_e_telefones.csv', sep=';', index=False, encoding='utf-8')
+ativas_reduzido.to_csv('ativas.csv', sep=';', index=False, encoding='utf-8')
 
+print("CSV gerado com sucesso!")
