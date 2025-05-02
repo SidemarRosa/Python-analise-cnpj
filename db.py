@@ -32,7 +32,7 @@ dados = df[[
 
 # Query de inserção
 insert_query = """
-    INSERT INTO empresas_ativas (
+    INSERT INTO empresas (
         cnpj, nome_fantasia, cnae_fiscal, cnae_fiscal_secundaria,
         data_inicio_atividade, uf, municipio, email,
         ddd_1, telefone_1, ddd_2, telefone_2
